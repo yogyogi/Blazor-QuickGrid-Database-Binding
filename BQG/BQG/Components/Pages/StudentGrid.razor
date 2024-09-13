@@ -1,0 +1,77 @@
+﻿@using BQG.Data
+
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+@using Microsoft.EntityFrameworkCore
+
+@rendermode InteractiveServer
+
+@implements IAsyncDisposable
+
+@inject IDbContextFactory<DataContext> DbFactory
+
+@page "/"
+
+@page "/student-grid"
+
+<style>
+    .quickgrid[theme=corporate] {
+        font-family: 'Comic Sans MS', 'Times New Roman', serif;
+        color: red;
+        border: 1px solid #CCC;
+        font-size:20px;
+        width: 100%;
+    }
+
+    .quickgrid[theme=corporate] thead{
+        background-color:antiquewhite;
+    }
+
+        .quickgrid[theme=corporate] .col-title {
+            gap: 0.4rem; /* Separate the sort indicator from title text */
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .quickgrid[theme=corporate] .sort-indicator {
+            color: blue;
+        }
+
+        .quickgrid[theme=corporate] button.col-title:hover, .quickgrid[theme=corporate] .col-options-button:hover {
+            background-color: hotpink;
+        }
+
+        .quickgrid[theme=corporate] button.col-title:active, .quickgrid[theme=corporate] .col-options-button:active {
+            background-color: yellow;
+        }
+</style>
+
+<h1>Blazor QuickGrid - Students</h1>
+
+<p>Tutorial link - <a target="_blank" href="https://www.yogihosting.com/blazor-quickgrid/">Blazor QuickGrid Database Binding tutorial</a></p>
+
+<QuickGrid Items="context.Student" Pagination="pagination" Theme="corporate">
+    <PropertyColumn Property="@(s => s.Id)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.Name)" Sortable="true" Title="Student Name" />
+    <PropertyColumn Property="@(s => s.Age)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.DOB)" Format="yyyy-MM-dd" Sortable="true" />
+    <PropertyColumn Property="@(s => s.Standard)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.Sex)" Sortable="true" />
+    <PropertyColumn Property="@(s => s.School)" Sortable="true" />
+</QuickGrid>
+
+<Paginator State="pagination" />
+
+@code {
+
+    private DataContext context = default!;
+
+    protected override void OnInitialized()
+    {
+    context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+
+    PaginationState pagination = new PaginationState { ItemsPerPage = 4 };
+}

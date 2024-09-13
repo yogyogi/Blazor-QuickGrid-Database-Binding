@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Yogesh\\SEO\\Yogihosting\\new\\BlazorQuickGrid\\BQG\\BQG\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BQG.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BQG.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Yogesh\\SEO\\Yogihosting\\new\\BlazorQuickGrid\\BQG\\BQG\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "E:\\Yogesh\\SEO\\Yogihosting\\new\\BlazorQuickGrid\\BQG\\BQG\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Yogesh\\SEO\\Yogihosting\\new\\BlazorQuickGrid\\BQG\\BQG\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Yogesh\\SEO\\Yogihosting\\new\\BlazorQuickGrid\\BQG\\BQG\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BQG.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BQG.props",
+      "PackagePath": "build\\BQG.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BQG.props",
+      "PackagePath": "buildMultiTargeting\\BQG.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BQG.props",
+      "PackagePath": "buildTransitive\\BQG.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
