@@ -1,4 +1,4 @@
-# Blazor WebAssembly Authentication with ASP.NET Core Identity
+# Blazor QuickGrid Database Binding
 
 <img src="https://www.yogihosting.com/wp-content/uploads/2024/09/Blazor-QuickGrid.png" alt="Blazor QuickGrid Tutorial"  title="Blazor QuickGrid Tutorial">
 
